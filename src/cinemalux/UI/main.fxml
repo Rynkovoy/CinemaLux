@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinemalux.UI.MainController">
+    <children>
+      <ImageView fx:id="graf" fitHeight="640.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bg/1.jpg" />
+         </image>
+      </ImageView>
+        <Label fx:id="userInfoLabel" layoutX="130.0" layoutY="14.0" text="Type : Name" textFill="WHITE" />
+        <Label fx:id="dateLabel" layoutX="14.0" layoutY="14.0" text="Date" textFill="WHITE" />
+        <ListView fx:id="movieList" layoutX="15.0" layoutY="69.0" prefHeight="359.0" prefWidth="200.0" AnchorPane.bottomAnchor="52.0" AnchorPane.topAnchor="69.0" />
+        <Label layoutX="14.0" layoutY="41.0" text="Сеансы на" textFill="WHITE" />
+        <DatePicker fx:id="datePicker" editable="false" layoutX="79.0" layoutY="37.0" prefHeight="25.0" prefWidth="136.0" />
+        <Button fx:id="sellButton" layoutX="522.0" layoutY="596.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Продать" AnchorPane.bottomAnchor="19.0" />
+        <Button fx:id="bookButton" layoutX="240.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Забронировать" AnchorPane.topAnchor="37.0" />
+        <Label fx:id="titleLabel" layoutX="239.0" layoutY="73.0" text="Title" textFill="WHITE" AnchorPane.topAnchor="73.0" />
+        <Button fx:id="addMovieButton" layoutX="475.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="+ Киносеанс" AnchorPane.topAnchor="37.0" />
+        <GridPane fx:id="gridPane" layoutX="240.0" layoutY="98.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="395.0" prefWidth="537.0" style="-fx-border-color: #ccc; -fx-border-style: dotted;" AnchorPane.bottomAnchor="147.0" AnchorPane.topAnchor="98.0">
+
+        </GridPane>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#D50000" height="20.0" layoutX="240.0" layoutY="360.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" AnchorPane.bottomAnchor="100.0" />
+        <Label layoutX="268.0" layoutY="362.0" text="Занято" textFill="WHITE" AnchorPane.bottomAnchor="103.0" />
+        <Label layoutX="268.0" layoutY="402.0" text="Свободно" textFill="WHITE" AnchorPane.bottomAnchor="63.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9E9E9E" height="20.0" layoutX="240.0" layoutY="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" AnchorPane.bottomAnchor="60.0" />
+        <Label layoutX="268.0" layoutY="440.0" text="Забронировано" textFill="WHITE" AnchorPane.bottomAnchor="23.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#FF9800" height="20.0" layoutX="240.0" layoutY="440.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" AnchorPane.bottomAnchor="20.0" />
+        <Label layoutX="371.0" layoutY="362.0" text="Стоимость" textFill="WHITE" AnchorPane.bottomAnchor="103.0" />
+        <Label layoutX="371.0" layoutY="402.0" text="Внесено" textFill="WHITE" AnchorPane.bottomAnchor="63.0" />
+        <Label layoutX="371.0" layoutY="440.0" text="Сдача" textFill="WHITE" AnchorPane.bottomAnchor="23.0" />
+        <TextField fx:id="costField" editable="false" layoutX="444.0" layoutY="358.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.bottomAnchor="99.0" />
+        <TextField fx:id="payField" layoutX="444.0" layoutY="398.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.bottomAnchor="59.0" />
+        <TextField fx:id="payBackField" editable="false" layoutX="444.0" layoutY="436.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.bottomAnchor="19.0" />
+        <Button fx:id="unbookButton" layoutX="357.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="108.0" text="Снять бронь" AnchorPane.topAnchor="37.0" />
+        <Button fx:id="unsellButton" layoutX="599.0" layoutY="596.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Возврат" AnchorPane.bottomAnchor="19.0" />
+        <Label fx:id="rowLabel1" layoutX="525.0" layoutY="360.0" textFill="WHITE" AnchorPane.bottomAnchor="103.0" />
+        <Label fx:id="rowLabel2" layoutX="525.0" layoutY="380.0" textFill="WHITE" AnchorPane.bottomAnchor="83.0" />
+        <Label fx:id="rowLabel3" layoutX="525.0" layoutY="400.0" textFill="WHITE" AnchorPane.bottomAnchor="63.0" />
+        <Button fx:id="saveReportButton" layoutX="121.0" layoutY="438.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="Отчет" AnchorPane.bottomAnchor="17.0" />
+      <Button fx:id="addMovieInfoButton" layoutX="575.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="+ Фильм" />
+      <Label layoutX="791.0" layoutY="73.0" text="Описание" textFill="WHITE" />
+      <Label fx:id="descriptionField" alignment="TOP_LEFT" layoutX="791.0" layoutY="101.0" prefHeight="216.0" prefWidth="284.0" style="-fx-background-color: #333; -fx-opacity: 0.8; -fx-padding: 5px; -fx-border-radius: 5px;" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" />
+      <ImageView fx:id="coverView" fitHeight="240.0" fitWidth="180.0" layoutX="1086.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="793.0" layoutY="332.0" text="Трейлер" textFill="WHITE" />
+      <Button fx:id="adminPanel" layoutX="677.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Админ панель" />
+      <Label fx:id="pointsLabel" layoutX="357.0" layoutY="14.0" textFill="WHITE" />
+      <CheckBox fx:id="usePoints" layoutX="677.0" layoutY="602.0" mnemonicParsing="false" text="Баллы" visible="false" />
+      <WebView fx:id="webView" layoutX="793.0" layoutY="360.0" prefHeight="267.0" prefWidth="475.0" />
+    </children>
+</AnchorPane>
